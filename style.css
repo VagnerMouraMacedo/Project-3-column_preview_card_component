@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "BigShouldersDisplay";
+  src: url(fonts/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "LexendDeca-VariableFont";
+  src: url(fonts/LexendDeca-VariableFont_wght.ttf);
+}
+
+:root {
+  --Bright_orange: hsl(30, 77%, 52%);
+  --Dark_cyan: hsl(184, 100%, 22%);
+  --Very_dark_cyan: hsl(179, 100%, 13%);
+  --Transparent_white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very_light_gray_background-headings-buttons: hsl(0, 0%, 95%);
+}
+body{
+  background-color: var(--Very_light_gray_background-headings-buttons);
+}
+.main {
+  font-family: "LexendDeca-VariableFont";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  padding: 80px 0 0 0;
+  background-color: var(--Very_light_gray_background-headings-buttons);
+}
+#box-car {
+  width: 300px;
+  height: auto;
+  padding: 50px 50px 0 50px;
+}
+#box-car img {
+  width: 55px;
+  height: auto;
+}
+#box-car .title {
+  font-size: 2.3em;
+  font-family: "BigShouldersDisplay";
+  font-weight: 700;
+  color: white;
+  padding: 30px 0;
+  text-transform: uppercase;
+}
+#box-car .content {
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: start;
+  color: var(--Transparent_white-paragraphs);
+}
+#box-car button {
+  border-radius: 20px;
+  border: none;
+  margin: 30px 0 50px 0;
+  padding: 13px 30px;
+  font-size: 0.84em;
+  font-weight: 600;
+  background-color: var(--Very_light_gray_background-headings-buttons);
+}
+#box-car button:hover {
+  border: 1px solid var(--Very_light_gray_background-headings-buttons);
+  cursor: pointer;
+}
+
+#box-car.sedans {
+  background-color: var(--Bright_orange);
+  border-radius: 10px 10px 0 0;
+}
+#box-car.sedans button {
+  color: var(--Bright_orange);
+}
+#box-car.sedans button:hover {
+  background-color: var(--Bright_orange);
+  color: white;
+}
+#box-car.suvs {
+  background-color: var(--Dark_cyan);
+}
+#box-car.suvs button {
+  color: var(--Dark_cyan);
+}
+#box-car.suvs button:hover {
+  background-color: var(--Dark_cyan);
+  color: white;
+}
+#box-car.luxury {
+  background-color: var(--Very_dark_cyan);
+  border-radius: 0 0 10px 10px;
+}
+#box-car.luxury button {
+  color: var(--Very_dark_cyan);
+}
+#box-car.luxury button:hover {
+  background-color: var(--Very_dark_cyan);
+  color: white;
+}
+.attribution{
+  padding-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .attribution{
+    padding: 0;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main{
+    flex-direction: row;
+    padding: 0;
+  }
+  #box-car{
+    width: 255px;
+    height: 430px;
+    padding-right: 40px;
+  }
+  #box-car.sedans {
+    border-radius: 10px 0 0 10px;
+  }
+  #box-car .content{
+    color:(--Very_light_gray_background-headings-buttons);
+    font-size: .9em;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+  #box-car button{
+    margin-bottom:30px ;
+  }
+  #box-car.luxury {
+    border-radius: 0px 10px 10px 0;
+  }
+  
+}
+@media screen and (min-width:1024px) {
+  #box-car{
+    width: 272px;
+    padding: 40px;
+  }
+ #box-car p.content{
+  font-size: .85em;
+  margin-bottom: 40px;
+  font-weight: 400;
+ }
+  
+ 
+}
+
